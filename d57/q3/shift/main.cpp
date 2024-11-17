@@ -1,14 +1,12 @@
-#include <iostream>
-#include <assert.h>
 #include "list.h"
+#include <assert.h>
+#include <iostream>
 #include <string>
 using namespace std;
 
-
 int main() {
-  int n,k;
+  int n, k;
   CP::list<int> l;
-
 
   std::cin >> n;
   while (n--) {
@@ -20,7 +18,7 @@ int main() {
 
   l.shift(k);
 
-  //check result
+  // check result
   l.check();
   auto it = l.begin();
   while (it != l.end()) {
@@ -28,12 +26,13 @@ int main() {
     it++;
   }
   std::cout << std::endl;
-  it = l.end(); it--;
+  it = l.end();
+  it--;
   while (it != l.end()) {
     std::cout << *it << " ";
     it--;
   }
   std::cout << std::endl;
 
-	return 0;
+  return 0;
 }

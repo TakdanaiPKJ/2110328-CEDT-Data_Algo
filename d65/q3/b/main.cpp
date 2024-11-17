@@ -12,6 +12,7 @@ int main() {
     q.push(element);
   }
   q.reverse();
+  q.push(-1);
   while (!q.empty()) {
     std::cout << q.front() << " ";
     q.pop();

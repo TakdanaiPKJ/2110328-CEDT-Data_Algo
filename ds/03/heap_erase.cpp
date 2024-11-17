@@ -4,6 +4,7 @@
 #include <stdexcept>
 #include <stdio.h>
 #include <stdlib.h>
+#include <utility>
 
 namespace CP {
 
@@ -117,7 +118,7 @@ public:
     // write your code here
     for (int i = 0; i < mSize; i++) {
       if (mData[i] == v) {
-        mData[i] = mData[mSize - 1];
+        std::swap(mData[i], mData[mSize - 1]);
         mSize--;
         fixUp(i);
         fixDown(i);

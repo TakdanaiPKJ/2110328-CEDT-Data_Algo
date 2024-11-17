@@ -6,7 +6,7 @@ template <typename T> T CP::queue<T>::operator[](int idx) {
   //
   //  you need to return something
   int id = (idx < 0) ? (size() + idx) : idx;
-  return mData[(mFront + id) % mSize];
+  return mData[(mFront + id) % mCap];
 }
 
 #endif
